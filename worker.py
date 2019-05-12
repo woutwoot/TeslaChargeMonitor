@@ -85,7 +85,7 @@ def main():
 
                 if should_sleep:
                     print('We\'re trying to have the car sleep. We\'ve waited {} minutes so far.'
-                          .format(total_sleep_time))
+                          .format(total_sleep_time / 60))
                 else:
                     charge_state = log_charge_state(car)
                     print('Current charge state: {}'.format(charge_state['charging_state']))
