@@ -98,7 +98,7 @@ def main():
 
                         if charge_state['scheduled_charging_pending']:
                             charge_start_date = datetime.fromtimestamp(
-                                int(charge_state['scheduled_charging_start_time']) / 1000)
+                                int(charge_state['scheduled_charging_start_time']))
                             print('A charge is planned to start later. ({})'.format(
                                 str(charge_start_date)[:19]))
 
