@@ -96,7 +96,7 @@ def main():
 
                     if charge_state['charging_state'] == 'Stopped':
 
-                        if charge_state['managed_charging_start_time'] != 'null':
+                        if charge_state['managed_charging_start_time'] is not None:
                             charge_start_date = datetime.fromtimestamp(
                                 int(charge_state['managed_charging_start_time']) / 1000)
                             print('A charge is planned to start later. ({})'.format(
